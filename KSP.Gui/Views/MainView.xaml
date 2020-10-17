@@ -1,0 +1,496 @@
+﻿<c:MetroWindow
+    x:Class="KSP.Gui.Views.MainView"
+    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:c="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    ResizeMode="CanMinimize"
+    Title="KSP"
+    WindowStartupLocation="CenterScreen"
+    
+    Width="800" Height="600"
+    
+    Initialized="Window_Initialized"
+    Closing="Window_Closing"
+    KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Auto Pilot (F1)"
+            
+            Grid.Column="1" Grid.Row="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarAutoPilot"
+            
+            Value="100"
+            
+            Grid.Column="2" Grid.Row="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="SAS (F2)"
+            
+            Grid.Column="1" Grid.Row="2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarSAS"
+            
+            Value="100"
+            
+            Grid.Column="2" Grid.Row="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Throttle (F3)"
+            
+            Grid.Column="1" Grid.Row="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarThrottle"
+            
+            Value="100"
+            
+            Grid.Column="2" Grid.Row="3"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            Name="TextBlockThrottle"
+            
+            Grid.Column="2" Grid.Row="3"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Direction (1/2/3/4/5)"
+            
+            Grid.Column="1" Grid.Row="4"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockDirection1"
+            
+            Grid.Column="2" Grid.Row="4"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text=">>>"
+            
+            Grid.Column="2" Grid.Row="4"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockDirection2"
+            
+            Grid.Column="2" Grid.Row="4"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Stages"
+            
+            Grid.Column="4" Grid.Row="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockStages"
+            
+            Grid.Column="5" Grid.Row="1"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Current Stage"
+            
+            Grid.Column="4" Grid.Row="2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockCurrentStage"
+            
+            Grid.Column="5" Grid.Row="2"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Next Stage (SPACE)"
+            
+            Grid.Column="4" Grid.Row="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Apoapsis"
+            
+            Grid.Column="1" Grid.Row="6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarApoapsis"
+            
+            Grid.Column="2" Grid.Row="6"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            Name="TextBlockAltitude"
+            
+            Grid.Column="2" Grid.Row="6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockApoapsis1"
+            
+            Grid.Column="2" Grid.Row="6"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Periapsis"
+            
+            Grid.Column="1" Grid.Row="7"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarPeriapsis"
+            
+            Grid.Column="2" Grid.Row="7"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            Name="TextBlockApoapsis2"
+            
+            Grid.Column="2" Grid.Row="7"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockPeriapsis"
+            
+            Grid.Column="2" Grid.Row="7"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Fuel"
+            
+            Grid.Column="4" Grid.Row="6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarFuel"
+            
+            Grid.Column="5" Grid.Row="6"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            Name="TextBlockFuel"
+            
+            Grid.Column="5" Grid.Row="6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text="/"
+            
+            Grid.Column="5" Grid.Row="6"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockFuelMax"
+            
+            Grid.Column="5" Grid.Row="6"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Current Stage Fuel"
+            
+            Grid.Column="4" Grid.Row="7"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <ProgressBar
+            Name="ProgressBarCurrentStageFuel"
+            
+            Grid.Column="5" Grid.Row="7"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+        </ProgressBar>
+        <TextBlock
+            Name="TextBlockCurrentStageFuel"
+            
+            Grid.Column="5" Grid.Row="7"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text="/"
+            
+            Grid.Column="5" Grid.Row="7"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockCurrentStageFuelMax"
+            
+            Grid.Column="5" Grid.Row="7"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Prograde"
+            
+            Grid.Column="1" Grid.Row="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockPrograde"
+            
+            Grid.Column="2" Grid.Row="10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Retrograde"
+            
+            Grid.Column="1" Grid.Row="11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockRetrograde"
+            
+            Grid.Column="2" Grid.Row="11"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Pitch"
+            
+            Grid.Column="4" Grid.Row="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockPitch1"
+            
+            Grid.Column="5" Grid.Row="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text=">>>"
+            
+            Grid.Column="5" Grid.Row="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockPitch2"
+            
+            Grid.Column="5" Grid.Row="10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Heading"
+            
+            Grid.Column="4" Grid.Row="11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockHeading1"
+            
+            Grid.Column="5" Grid.Row="11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text=">>>"
+            
+            Grid.Column="5" Grid.Row="11"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockHeading2"
+            
+            Grid.Column="5" Grid.Row="11"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Roll"
+            
+            Grid.Column="4" Grid.Row="12"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockRoll1"
+            
+            Grid.Column="5" Grid.Row="12"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text=">>>"
+            
+            Grid.Column="5" Grid.Row="12"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockRoll2"
+            
+            Grid.Column="5" Grid.Row="12"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Velocity"
+            
+            Grid.Column="1" Grid.Row="14"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockVelocity1"
+            
+            Grid.Column="2" Grid.Row="14"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Text=">>>"
+            
+            Grid.Column="2" Grid.Row="14"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockVelocity2"
+            
+            Grid.Column="2" Grid.Row="14"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            FontWeight="Bold"
+            Foreground="Gray"
+            Text="Vertical Speed"
+            
+            Grid.Column="1" Grid.Row="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+        </TextBlock>
+        <TextBlock
+            Name="TextBlockVerticalSpeed"
+            
+            Grid.Column="2" Grid.Row="15"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+        </TextBlock>
+    </Grid>
+</c:MetroWindow>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSP.Gui", "KSP.Gui\KSP.Gui.csproj", "{762400E9-28C9-429B-8F1C-2E35E9D77571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSP.Shared", "KSP.Shared\KSP.Shared.csproj", "{D0BEB4C2-0275-4413-9E88-DD72BDE0ED9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{762400E9-28C9-429B-8F1C-2E35E9D77571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762400E9-28C9-429B-8F1C-2E35E9D77571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762400E9-28C9-429B-8F1C-2E35E9D77571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762400E9-28C9-429B-8F1C-2E35E9D77571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0BEB4C2-0275-4413-9E88-DD72BDE0ED9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BEB4C2-0275-4413-9E88-DD72BDE0ED9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BEB4C2-0275-4413-9E88-DD72BDE0ED9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BEB4C2-0275-4413-9E88-DD72BDE0ED9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CA4BBF8-26D0-4FE0-A4EE-D152D1C7D4F1}
+	EndGlobalSection
+EndGlobal
